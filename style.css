@@ -7,13 +7,23 @@
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
+.light_theme {
+  --text-color: black;
+  --background: white;
+}
+
+.dark_theme {
+  --text-color: white;
+  --background: black;
+}
+
 .main_header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: black;
-  color: white;
+  background-color: var(--background);
+  color: var(--text-color);
   padding-inline: 40px;
 
   nav ul {
@@ -32,7 +42,7 @@
       }
       &:hover {
         background-color: bisque;
-        color: black;
+        color: var(--text-color);
         cursor: pointer;
       }
     }
